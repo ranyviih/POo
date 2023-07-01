@@ -1,29 +1,27 @@
 
 import java.util.Scanner; 
 
-public class CompanhiaAerea{
-
+public class CompanhiaAerea{ //criando classe para iniciar o programa
+    
     final static Scanner leitor = new Scanner(System.in); 
     final static String nomesClientes[] = new String[10]; 
     final static boolean assentos[] = new boolean[10]; 
 
 
 
-    public static void CompraAssento(){
+    public static void CompraAssento(){ // criacao do metodo 
 
-        System.out.println("Por favor digite 1 para Primeira Classe e digite 2 para Classe Econômica");
+        System.out.println("Digite 1 para a Primeira Classe e digite 2 para a Classe Econômica"); //printando entrada
 
-        int entrada = leitor.nextInt();
+        int entrada = leitor.nextInt(); //lendo a entrada com Sacnner
 
-        if (entrada == 1){ 
+        if (entrada == 1){  //estabelecendo saida de o numero digitado for 1
             int i = 0;
             boolean achouAssento = true;
 
             do{
-                if (i == 5){
-                    System.out.println("===========================================\n");
+                if (i == 5){ //limitamdo os acentos
                     System.out.println("Todos os assentos da primeira classe estão cheios");
-                    System.out.println("===========================================\n");
 
                     for(int hj = 5; hj<11; hj++){
                         if (assentos[hj] == false){
@@ -35,9 +33,7 @@ public class CompanhiaAerea{
                             if (a == 1){
                                 CompraAssento();
                             } else{
-                                System.out.println("===========================================\n");
                                 System.out.println("Pena que não sera possivel realizar a compra :(");
-                                System.out.println("===========================================\n");
                             }
 
                             break;
