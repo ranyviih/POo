@@ -1,6 +1,7 @@
 package animais;
-
+// Classe principal
 public class Main {
+    // testando os metodos implementados
     public static void main(String[] args) {
         Cachorro cachorro = new Cachorro("fifi", 4, "Labrador");
         cachorro.emitirSom();
